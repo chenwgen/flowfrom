@@ -1,0 +1,15 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index
+GET     /loan                       controllers.LoanControllers.getMessageTable
+GET     /recall_warn                controllers.RecallControllers.getWarnTable
+GET     /recall_info                controllers.RecallControllers.getRecallTable
+GET     /flow                       controllers.FlowControllers.getMessageTable
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+    
